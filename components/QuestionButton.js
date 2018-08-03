@@ -4,7 +4,7 @@ import { StackNavigator } from "react-navigation";
 
 const QuestionButton = ({ navigation }) => (
   <Button
-    onPress={() => navigation.navigate("Questions")}
+    onPress={() => navigation.navigate("Home")}
     title="Submit a question"
   />
 );

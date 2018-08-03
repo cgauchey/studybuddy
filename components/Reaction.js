@@ -1,8 +1,8 @@
 import React from "react";
 import { StyleSheet, Text, View, Button } from "react-native";
 import { createStackNavigator } from "react-navigation";
-import QuestionButton from "./QuestionButton";
 import socket from "./Sockets";
+import Questions from "./Questions";
 
 class Reaction extends React.Component {
   constructor(props) {
@@ -83,8 +83,9 @@ class Reaction extends React.Component {
           onPress={this.incrementExample}
           title="I could use an example"
         />
-        <QuestionButton />
+        {/* <QuestionButton /> */}
         <Button onPress={this.reset} title="Reset" />
+        <Questions />
       </View>
     );
   }
@@ -93,8 +94,8 @@ class Reaction extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
-    backgroundColor: "#AAA"
+    // alignItems: "center",
+    backgroundColor: "white"
     // justifyContent: "center"
   }
 });

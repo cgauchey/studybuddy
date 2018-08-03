@@ -13,7 +13,7 @@ const theMap = () => (
       longitudeDelta: 0.0421
     }}
   >
-    <Marker
+    {/* <Marker
       coordinate={{
         latitude: 40.8075,
         longitude: -73.9626,
@@ -21,7 +21,7 @@ const theMap = () => (
         longitudeDelta: 0.0421
       }}
       title="Columbia University"
-    />
+    /> */}
 
     <Marker
       coordinate={{
