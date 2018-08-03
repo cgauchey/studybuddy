@@ -4,15 +4,14 @@ import { StackNavigator } from "react-navigation";
 
 const Home = ({ navigation }) => (
   <View style={styles.container}>
-    <Text>Wait, What?!</Text>
+    <Text>Welcome to Study Buddy!</Text>
     <Button
       onPress={() => navigation.navigate("SignIn")}
       title="Sign in to your class"
     />
-    <Button onPress={() => navigation.navigate("Map")} title="View Map" />
     <Button
-      onPress={() => navigation.navigate("Questions")}
-      title="Submit a question"
+      onPress={() => navigation.navigate("Map")}
+      title="View Library Map"
     />
   </View>
 );
