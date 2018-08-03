@@ -15,7 +15,7 @@ class Reaction extends React.Component {
     this.incrementRepeat = this.incrementRepeat.bind(this);
     this.incrementExplain = this.incrementExplain.bind(this);
     this.incrementExample = this.incrementExample.bind(this);
-    this.reset = this.reset.bind(this);
+    // this.reset = this.reset.bind(this);
     this.handleSocket = this.handleSocket.bind(this);
   }
 
@@ -83,8 +83,7 @@ class Reaction extends React.Component {
           onPress={this.incrementExample}
           title="I could use an example"
         />
-        {/* <QuestionButton /> */}
-        <Button onPress={this.reset} title="Reset" />
+        {/* <Button onPress={this.reset} title="Reset" /> */}
         <Questions />
       </View>
     );

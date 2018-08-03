@@ -47,5 +47,13 @@ module.exports = io => {
         socket_.broadcast.emit("resetCounter", [countReset, resetCounter]);
       });
     });
+
+    // socket.on("questions", questions => {
+    //   rooms["room1"].map(socket_ => {
+    //     console.log("questions", questions);
+    //     console.log("questions item", questions[0]["text"]);
+    //     socket_.broadcast.emit("questions", questions);
+    //   });
+    // });
   });
 };
