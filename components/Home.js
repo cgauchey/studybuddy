@@ -18,11 +18,11 @@ const Home = ({ navigation }) => (
     {/* <Button
       onPress={() => navigation.navigate("Map")}
       title="View Library Map"
-    />
-    <Button
-      onPress={() => navigation.navigate("AllStudents")}
-      title="All Students"
     /> */}
+    <Button
+      onPress={() => navigation.navigate("Reaction")}
+      title="Participate"
+    />
   </View>
 );
 

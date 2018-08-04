@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Button } from "react-native";
 import { createStackNavigator } from "react-navigation";
 import socket from "./Sockets";
 import Questions from "./Questions";
+import styles from "./StyleSheet";
 
 class Reaction extends React.Component {
   constructor(props) {
@@ -71,24 +72,27 @@ class Reaction extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>How students are reacting:</Text>
-        <Text>{this.state.repeatCounter} Repeat</Text>
-        <Text>{this.state.explainCounter} Explain</Text>
-        <Text>{this.state.exampleCounter} Example</Text>
+        <View style={styles.reactions}>
+          <Text style={styles.title}>How students are reacting:</Text>
+          <View style={styles.repeat}>
+            <Text style={styles.font}>{this.state.repeatCounter} Repeat</Text>
+          </View>
+          <View style={styles.explain}>
+            <Text style={styles.font}>
+              {this.state.explainCounter} Explain More
+            </Text>
+          </View>
+          <View style={styles.example}>
+            <Text style={styles.font}>
+              {this.state.exampleCounter} Give An Example
+            </Text>
+          </View>
+        </View>
         <Button onPress={this.reset} title="Reset" />
         <Questions />
       </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    // alignItems: "center",
-    backgroundColor: "white"
-    // justifyContent: "center"
-  }
-});
 
 export default Reaction;

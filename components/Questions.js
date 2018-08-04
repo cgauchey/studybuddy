@@ -14,7 +14,7 @@ class Questions extends React.Component {
     this.onSend = this.onSend.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.setState({
       messages: [
         {
@@ -25,7 +25,7 @@ class Questions extends React.Component {
             _id: 2,
             name: "React Native",
             avatar:
-              "https://ih1.redbubble.net/image.470680968.7819/st%2Csmall%2C215x235-pad%2C210x230%2Cf8f8f8.lite-1u5.jpg"
+              "https://images-platform.99static.com/fHPxSzfJy7lsHfReCeiicVn1FwA=/500x500/top/smart/99designs-contests-attachments/59/59081/attachment_59081997"
           }
         }
       ]
@@ -60,6 +60,7 @@ class Questions extends React.Component {
   render() {
     return (
       <GiftedChat
+        style={styles.container}
         messages={this.state.messages}
         onSend={messages => this.onSend(messages)}
         user={{
@@ -69,5 +70,9 @@ class Questions extends React.Component {
     );
   }
 }
-
+const styles = StyleSheet.create({
+  container: {
+    marginBottom: 20
+  }
+});
 export default Questions;
