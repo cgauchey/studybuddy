@@ -13,15 +13,15 @@ const SignIn = ({ navigation }) => (
     <FormLabel>School E-mail</FormLabel>
     <FormInput />
     {/* <FormInput onChangeText={INSERTFUNCTION} /> */}
-    <FormValidationMessage>This field is required</FormValidationMessage>
+    {/* <FormValidationMessage>This field is required</FormValidationMessage> */}
     <FormLabel>Password</FormLabel>
     <FormInput />
     {/* <FormInput onChangeText={INSERTFUNCTION} /> */}
-    <FormValidationMessage>This field is required</FormValidationMessage>
+    {/* <FormValidationMessage>This field is required</FormValidationMessage> */}
     <FormLabel>Classroom ID</FormLabel>
     <FormInput />
     {/* <FormInput onChangeText={INSERTFUNCTION} /> */}
-    <FormValidationMessage>This field is required</FormValidationMessage>
+    {/* <FormValidationMessage>This field is required</FormValidationMessage> */}
     <Button
       onPress={() => navigation.navigate("StudentView")}
       title="Sign In As Student"
@@ -37,7 +37,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    backgroundColor: "white"
   }
 });
 
