@@ -9,26 +9,26 @@ const theMap = () => (
     initialRegion={{
       latitude: 40.8075,
       longitude: -73.9626,
-      latitudeDelta: 0.0922,
-      longitudeDelta: 0.0421
+      latitudeDelta: 0.02,
+      longitudeDelta: 0.009
     }}
   >
-    {/* <Marker
+    <Marker
       coordinate={{
-        latitude: 40.8075,
-        longitude: -73.9626,
-        latitudeDelta: 0.0922,
-        longitudeDelta: 0.0421
+        latitude: 40.8064,
+        longitude: -73.9632,
+        latitudeDelta: 0.02,
+        longitudeDelta: 0.009
       }}
-      title="Columbia University"
-    /> */}
+      title="Butler Library"
+    />
 
     <Marker
       coordinate={{
         latitude: 40.8083,
         longitude: -73.961,
-        latitudeDelta: 0.0922,
-        longitudeDelta: 0.0421
+        latitudeDelta: 0.02,
+        longitudeDelta: 0.009
       }}
       title="Avery Architectural and Fine Arts Library"
     />
@@ -37,10 +37,20 @@ const theMap = () => (
       coordinate={{
         latitude: 40.8089,
         longitude: -73.9614,
-        latitudeDelta: 0.0922,
-        longitudeDelta: 0.0421
+        latitudeDelta: 0.02,
+        longitudeDelta: 0.009
       }}
       title="Business and Economics Library"
+    />
+
+    <Marker
+      coordinate={{
+        latitude: 40.8101,
+        longitude: -73.962,
+        latitudeDelta: 0.02,
+        longitudeDelta: 0.009
+      }}
+      title="NOCO"
     />
   </MapView>
 );

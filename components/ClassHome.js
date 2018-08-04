@@ -2,10 +2,18 @@ import React from "react";
 import { StyleSheet, Text, View, Button } from "react-native";
 import { StackNavigator } from "react-navigation";
 
-const Class = ({ navigation }) => (
+const ClassHome = ({ navigation }) => (
   <View style={styles.container}>
-    <Text>Welcome to Intro to JavaScript!</Text>
-    <Button onPress={() => navigation.navigate("Roster")} title="View Roster" />
+    <Text>Class Page</Text>
+
+    <Button
+      onPress={() => navigation.navigate("Map")}
+      title="View Library Map"
+    />
+    <Button
+      onPress={() => navigation.navigate("AllStudents")}
+      title="All Students"
+    />
   </View>
 );
 
@@ -17,4 +25,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Class;
+export default ClassHome;

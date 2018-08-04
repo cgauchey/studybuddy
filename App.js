@@ -6,9 +6,10 @@ import Reaction from "./components/Reaction";
 import SignIn from "./components/SignIn";
 import ViewReactions from "./components/ViewReactions";
 import Questions from "./components/Questions";
-import Class from "./components/Class";
-import Roster from "./components/Roster";
 import theMap from "./components/Map";
+import AllStudents from "./components/AllStudents";
+import StudentView from "./components/StudentView";
+import TeacherView from "./components/TeacherView";
 
 const RootNavigator = createStackNavigator({
   Main: {
@@ -41,22 +42,28 @@ const RootNavigator = createStackNavigator({
       headerTitle: "Questions"
     }
   },
-  Class: {
-    screen: Class,
-    navigationOptions: {
-      headerTitle: "Class"
-    }
-  },
-  Roster: {
-    screen: Roster,
-    navigationOptions: {
-      headerTitle: "Roster"
-    }
-  },
   Map: {
     screen: theMap,
     navigationOptions: {
       headerTitle: "Map"
+    }
+  },
+  AllStudents: {
+    screen: AllStudents,
+    navigationOptions: {
+      headerTitle: "All Students"
+    }
+  },
+  StudentView: {
+    screen: StudentView,
+    navigationOptions: {
+      headerTitle: "Student View"
+    }
+  },
+  TeacherView: {
+    screen: TeacherView,
+    navigationOptions: {
+      headerTitle: "Teacher View"
     }
   }
 });
