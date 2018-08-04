@@ -48,12 +48,12 @@ module.exports = io => {
       });
     });
 
-    // socket.on("questions", questions => {
-    //   rooms["room1"].map(socket_ => {
-    //     console.log("questions", questions);
-    //     console.log("questions item", questions[0]["text"]);
-    //     socket_.broadcast.emit("questions", questions);
-    //   });
-    // });
+    socket.on("message", questions => {
+      rooms["room1"].map(socket_ => {
+        console.log("questions", questions);
+        // console.log("questions item", questions[0]["text"]);
+        socket_.emit("message", questions);
+      });
+    });
   });
 };

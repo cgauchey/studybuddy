@@ -83,7 +83,6 @@ class Reaction extends React.Component {
           onPress={this.incrementExample}
           title="I could use an example"
         />
-        {/* <Button onPress={this.reset} title="Reset" /> */}
         <Questions />
       </View>
     );

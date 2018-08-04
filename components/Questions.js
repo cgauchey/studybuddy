@@ -6,11 +6,12 @@ import socket from "./Sockets";
 class Questions extends React.Component {
   constructor(props) {
     super(props);
-    state = {
+    this.state = {
       messages: []
     };
-    // this.handleSocket = this.handleSocket.bind(this);
-    // this.onSend = this.onSend.bind(this);
+    this.handleSocket = this.handleSocket.bind(this);
+    this.onReceive = this.onReceive.bind(this);
+    this.onSend = this.onSend.bind(this);
   }
 
   componentWillMount() {
@@ -29,23 +30,31 @@ class Questions extends React.Component {
         }
       ]
     });
-    // this.handleSocket(); ///
+    this.handleSocket();
   }
 
-  // handleSocket() {
-  //   ///
-  //   socket.on("questions", questions => {
-  //     console.log("questions in QUESTIONS", questions);
-  //     this.setState({ messages: [...state, questions[0]["text"]] });
-  //   });
-  // }
+  handleSocket() {
+    // socket.on("questions", questions => {
+    //   console.log("questions in QUESTIONS", questions);
+    //   this.setState({ messages: [...this.state, questions[0]["text"]] });
+    // });
+    socket.on("message", this.onReceive);
+  }
 
-  onSend(messages = []) {
+  onReceive(messages) {
     this.setState(previousState => ({
       messages: GiftedChat.append(previousState.messages, messages)
     }));
-    console.log("THIS.STATE.MESSAGES", this.state.messages);
-    socket.emit("questions", this.state.messages);
+  }
+
+  onSend(messages = []) {
+    socket.emit("message", messages[0]);
+    console.log("MESSAGES", messages);
+    this.setState(previousState => ({
+      messages: GiftedChat.append(previousState.messages, messages)
+    }));
+    // console.log("THIS.STATE.MESSAGES", this.state.messages);
+    // socket.emit("questions", this.state.messages);
   }
 
   render() {
