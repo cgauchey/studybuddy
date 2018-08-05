@@ -5,33 +5,30 @@ import {
   FormInput,
   FormValidationMessage
 } from "react-native-elements";
-
 import { StackNavigator } from "react-navigation";
+import styles from "./StyleSheet";
 
 const SignIn = ({ navigation }) => (
-  <View style={styles.container}>
-    <Button
-      onPress={() => navigation.navigate("ViewReactions")} //change to ViewReactions
-      title="View Class Participation"
-    />
-    <Button
-      onPress={() => navigation.navigate("AllStudents")}
-      title="View Class Information"
-    />
-    <Button
-      onPress={() => navigation.navigate("Map")}
-      title="View Library Map"
-    />
+  <View style={styles.homeBtnContainer}>
+    <View style={styles.primaryBtn}>
+      <Button
+        onPress={() => navigation.navigate("ViewReactions")}
+        title="View Class Participation"
+      />
+    </View>
+    <View style={styles.primaryBtn}>
+      <Button
+        onPress={() => navigation.navigate("AllStudents")}
+        title="View Class Information"
+      />
+    </View>
+    <View style={styles.primaryBtn}>
+      <Button
+        onPress={() => navigation.navigate("Map")}
+        title="View Library Map"
+      />
+    </View>
   </View>
 );
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "white"
-  }
-});
 
 export default SignIn;

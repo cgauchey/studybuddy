@@ -75,7 +75,8 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     paddingBottom: 10,
     paddingRight: 17,
-    paddingLeft: 17
+    paddingLeft: 17,
+    width: 200
   },
   allStudents: {
     flexDirection: "row"
@@ -91,6 +92,24 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
     paddingRight: 17,
     paddingLeft: 17
+  },
+  homeBtnContainer: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "white"
+  },
+  primaryBtn: {
+    backgroundColor: "#A2EBFF",
+    borderRadius: 10,
+    marginRight: 40,
+    marginLeft: 40,
+    marginTop: 10,
+    paddingTop: 17,
+    paddingBottom: 17,
+    paddingRight: 17,
+    paddingLeft: 17,
+    width: 300
   }
 });
 

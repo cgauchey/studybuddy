@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  Button,
-  ScrollView,
-  Grid,
-  Col,
-  Row
-} from "react-native";
+import { StyleSheet, Text, View, Button, ScrollView } from "react-native";
 import db from "../firestore";
 import { fetchAllStudents } from "./store/students";
 import { connect } from "react-redux";
@@ -40,6 +31,17 @@ class AllStudents extends React.Component {
       });
     });
     this.setState({ allStudents: arr });
+  }
+
+  randomGroup(allStudents) {
+    var j, x, i;
+    for (i = allStudents.length - 1; i > 0; i--) {
+      j = Math.floor(Math.random() * (i + 1));
+      x = allStudents[i];
+      allStudents[i] = allStudents[j];
+      allStudents[j] = x;
+    }
+    return allStudents[0];
   }
 
   render() {
@@ -77,9 +79,9 @@ class AllStudents extends React.Component {
             })
           )}
         </ScrollView>
-        <View style={styles.explain}>
+        <View style={styles.primaryBtn}>
           <Button
-            onPress={() => navigation.navigate("AllStudents")}
+            onPress={() => this.props.navigation.navigate("StudyGroup")}
             title="Generate Study Group"
           />
         </View>

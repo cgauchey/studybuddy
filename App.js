@@ -10,6 +10,8 @@ import theMap from "./components/Map";
 import AllStudents from "./components/AllStudents";
 import StudentView from "./components/StudentView";
 import TeacherView from "./components/TeacherView";
+import StudyGroup from "./components/StudyGroup";
+import ClassroomId from "./components/ClassroomId";
 // import StudentHome from "./components/StudentHome";
 // import TeacherHome from "./components/TeacherHome";
 
@@ -66,6 +68,18 @@ const RootNavigator = createStackNavigator({
     screen: TeacherView,
     navigationOptions: {
       headerTitle: "Teacher View"
+    }
+  },
+  StudyGroup: {
+    screen: StudyGroup,
+    navigationOptions: {
+      headerTitle: "Study Buddy"
+    }
+  },
+  ClassroomId: {
+    screen: ClassroomId,
+    navigationOptions: {
+      headerTitle: "Input Classroom ID"
     }
   }
   // StudentHome: {

@@ -9,7 +9,6 @@ class Questions extends React.Component {
     this.state = {
       messages: []
     };
-    this.handleSocket = this.handleSocket.bind(this);
     this.onReceive = this.onReceive.bind(this);
     this.onSend = this.onSend.bind(this);
     this.storeMessages = this.storeMessages.bind(this);
@@ -31,10 +30,6 @@ class Questions extends React.Component {
         }
       ]
     });
-    socket.on("message", this.onReceive);
-  }
-
-  handleSocket() {
     socket.on("message", this.onReceive);
   }
 
