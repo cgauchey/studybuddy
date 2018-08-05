@@ -70,9 +70,11 @@ class Questions extends React.Component {
     );
   }
 }
+
 const styles = StyleSheet.create({
   container: {
     marginBottom: 20
   }
 });
+
 export default Questions;
