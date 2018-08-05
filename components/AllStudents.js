@@ -32,7 +32,7 @@ class AllStudents extends React.Component {
   }
 
   async allStudents() {
-    const allTheStudents = db.collection("students");
+    const allTheStudents = await db.collection("students");
     const arr = [];
     await allTheStudents.get().then(docsArr => {
       docsArr.forEach(doc => {

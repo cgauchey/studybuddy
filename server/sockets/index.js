@@ -48,12 +48,44 @@ module.exports = io => {
       });
     });
 
-    socket.on("message", questions => {
+    socket.on("message", messages => {
       rooms["room1"].map(socket_ => {
-        console.log("questions", questions);
-        // console.log("questions item", questions[0]["text"]);
-        socket_.emit("message", questions);
+        console.log("message", messages);
+        // console.log("messages item", messages[0]["text"]);
+        socket_.broadcast.emit("message", messages);
       });
     });
+
+    // const clients = {};
+    // const users = {};
+
+    // socket.on("connection", socket => {
+    //   clients[socket.id] = socket;
+    //   socket.on("message", message => onMessageReceived(message, socket));
+    // });
+
+    // function onMessageReceived(message, senderSocket) {
+    //   const userId = users[senderSocket.id];
+    //   sendAndSaveMessage(message, senderSocket);
+    // }
+
+    // function sendExistingMessage(socket) {
+    //   //send messages from db
+    //   const messages = db.collection();
+    // }
+
+    // function sendAndSaveMessage(message, socket, fromServer) {
+    //   const messageData = {
+    //     text: message.text,
+    //     createdAt: new Date(message.createdAt)
+    //     // chatId: chatId
+    //   };
+
+    //   db.collection("messages").insert(messageData, message => {
+    //     // If the message is from the server, then send to everyone.
+    //     var emitter = fromServer ? socket : socket.broadcast;
+    //     emitter.emit("message", [message]);
+    //   });
+    // }
   });
 };
