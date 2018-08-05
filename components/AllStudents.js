@@ -1,8 +1,18 @@
 import React from "react";
-import { StyleSheet, Text, View, Button } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  ScrollView,
+  Grid,
+  Col,
+  Row
+} from "react-native";
 import db from "../firestore";
 import { fetchAllStudents } from "./store/students";
 import { connect } from "react-redux";
+import styles from "./StyleSheet";
 
 // const firestore = require("firestore");
 // const classID = 1;
@@ -35,22 +45,44 @@ class AllStudents extends React.Component {
   render() {
     const allStudents = this.state.allStudents;
     return (
-      <View>
-        {allStudents.length === 0 ? (
-          <Text>Loading...</Text>
-        ) : (
-          allStudents.map(student => {
-            return (
-              <View key={student.id}>
-                <Text>
-                  {student.firstName} {student.lastName}
-                </Text>
-                <Text>{student.college}</Text>
-                <Text>{student.email}</Text>
-              </View>
-            );
-          })
-        )}
+      <View style={styles.container}>
+        <ScrollView>
+          {allStudents.length === 0 ? (
+            <View style={styles.loading}>
+              <Text style={styles.title}>Loading...</Text>
+            </View>
+          ) : (
+            allStudents.map(student => {
+              return (
+                <View style={styles.allStudents}>
+                  <View key={student.id} style={styles.studentInfo}>
+                    <Text style={styles.font}>
+                      {student.firstName} {student.lastName}
+                    </Text>
+                    {student.college ? (
+                      <Text style={styles.font}>{student.college}</Text>
+                    ) : (
+                      <Text style={styles.font}>(no college found)</Text>
+                    )}
+                    <Text style={styles.font}>{student.email}</Text>
+                  </View>
+                  {/* <View style={styles.addStudentBtn}>
+                    <Button
+                      // onPress={() => navigation.navigate("AllStudents")}
+                      title="Add to Study Group"
+                    />
+                  </View> */}
+                </View>
+              );
+            })
+          )}
+        </ScrollView>
+        <View style={styles.explain}>
+          <Button
+            onPress={() => navigation.navigate("AllStudents")}
+            title="Generate Study Group"
+          />
+        </View>
       </View>
     );
   }

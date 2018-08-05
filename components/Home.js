@@ -19,10 +19,14 @@ const Home = ({ navigation }) => (
       onPress={() => navigation.navigate("Map")}
       title="View Library Map"
     /> */}
-    <Button
+    {/* <Button
       onPress={() => navigation.navigate("Reaction")}
       title="Participate"
-    />
+    /> */}
+    {/* <Button
+      onPress={() => navigation.navigate("AllStudents")}
+      title="View Class Information"
+    /> */}
   </View>
 );
 

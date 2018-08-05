@@ -18,8 +18,8 @@ const SignIn = ({ navigation }) => (
     <FormInput />
     {/* <FormInput onChangeText={INSERTFUNCTION} /> */}
     {/* <FormValidationMessage>This field is required</FormValidationMessage> */}
-    <FormLabel>Classroom ID</FormLabel>
-    <FormInput />
+    {/* <FormLabel>Classroom ID</FormLabel>
+    <FormInput /> */}
     {/* <FormInput onChangeText={INSERTFUNCTION} /> */}
     {/* <FormValidationMessage>This field is required</FormValidationMessage> */}
     <Button

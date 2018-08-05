@@ -59,6 +59,38 @@ const styles = StyleSheet.create({
     fontSize: 20,
     paddingTop: 17,
     paddingBottom: 17
+  },
+  loading: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center"
+  },
+  studentInfo: {
+    backgroundColor: "#FEB100",
+    marginBottom: 5,
+    borderRadius: 10,
+    // marginRight: 160,
+    marginLeft: 20,
+    marginTop: 10,
+    paddingTop: 10,
+    paddingBottom: 10,
+    paddingRight: 17,
+    paddingLeft: 17
+  },
+  allStudents: {
+    flexDirection: "row"
+  },
+  addStudentBtn: {
+    backgroundColor: "#FEB100",
+    marginBottom: 5,
+    borderRadius: 10,
+    marginRight: 10,
+    marginLeft: 20,
+    marginTop: 10,
+    paddingTop: 10,
+    paddingBottom: 10,
+    paddingRight: 17,
+    paddingLeft: 17
   }
 });
 
