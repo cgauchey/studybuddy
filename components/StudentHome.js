@@ -10,16 +10,8 @@ import { StackNavigator } from "react-navigation";
 
 const SignIn = ({ navigation }) => (
   <View style={styles.container}>
-    <FormLabel>School E-mail</FormLabel>
+    <FormLabel>Classroom ID</FormLabel>
     <FormInput />
-    {/* <FormInput onChangeText={INSERTFUNCTION} /> */}
-    {/* <FormValidationMessage>This field is required</FormValidationMessage> */}
-    <FormLabel>Password</FormLabel>
-    <FormInput />
-    {/* <FormInput onChangeText={INSERTFUNCTION} /> */}
-    {/* <FormValidationMessage>This field is required</FormValidationMessage> */}
-    {/* <FormLabel>Classroom ID</FormLabel>
-    <FormInput /> */}
     {/* <FormInput onChangeText={INSERTFUNCTION} /> */}
     {/* <FormValidationMessage>This field is required</FormValidationMessage> */}
     <Button
