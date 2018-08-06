@@ -8,8 +8,11 @@ import {
 import { StackNavigator } from "react-navigation";
 import styles from "./StyleSheet";
 
-const SignIn = ({ navigation }) => (
+const StudentView = ({ navigation }) => (
   <View style={styles.homeBtnContainer}>
+    <View>
+      <Text style={styles.title}>Welcome to Intro to Coding!</Text>
+    </View>
     <View style={styles.primaryBtn}>
       <Button
         onPress={() => navigation.navigate("Reaction")}
@@ -28,10 +31,16 @@ const SignIn = ({ navigation }) => (
         title="View Library Map"
       />
     </View>
+    <View style={styles.primaryBtn}>
+      <Button
+        onPress={() => navigation.navigate("AllStudyGroups")}
+        title="View All Study Groups"
+      />
+    </View>
     <View>
       <Button onPress={() => navigation.navigate("Main")} title="Logout" />
     </View>
   </View>
 );
 
-export default SignIn;
+export default StudentView;

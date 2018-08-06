@@ -35,14 +35,12 @@ class StudyGroup extends React.Component {
       allStudents[i] = allStudents[j];
       allStudents[j] = x;
     }
-    // return allStudents[0];
     return allStudents.slice(0, 3);
   }
 
   render() {
     const allStudents = this.state.allStudents;
     const randomStudents = this.randomGroup(allStudents);
-    // const randomStudent = this.randomGroup(allStudents);
     return (
       <View style={styles.container}>
         <ScrollView>
@@ -51,7 +49,6 @@ class StudyGroup extends React.Component {
               <Text style={styles.title}>Loading...</Text>
             </View>
           ) : (
-            // return (
             ((
               <View style={styles.loading}>
                 <Text style={styles.title}>Your Study Buddies are ...</Text>

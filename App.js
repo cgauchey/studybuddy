@@ -12,8 +12,8 @@ import StudentView from "./components/StudentView";
 import TeacherView from "./components/TeacherView";
 import StudyGroup from "./components/StudyGroup";
 import ClassroomId from "./components/ClassroomId";
-// import StudentHome from "./components/StudentHome";
-// import TeacherHome from "./components/TeacherHome";
+import CreateGroup from "./components/CreateGroup";
+import AllStudyGroups from "./components/AllStudyGroups";
 
 const RootNavigator = createStackNavigator({
   Main: {
@@ -81,19 +81,19 @@ const RootNavigator = createStackNavigator({
     navigationOptions: {
       headerTitle: "Input Classroom ID"
     }
+  },
+  CreateGroup: {
+    screen: CreateGroup,
+    navigationOptions: {
+      headerTitle: "Create Study Group"
+    }
+  },
+  AllStudyGroups: {
+    screen: AllStudyGroups,
+    navigationOptions: {
+      headerTitle: "All Study Groups"
+    }
   }
-  // StudentHome: {
-  //   screen: StudentHome,
-  //   navigationOptions: {
-  //     headerTitle: "Student Home"
-  //   }
-  // },
-  // TeacherHome: {
-  //   screen: TeacherHome,
-  //   navigationOptions: {
-  //     headerTitle: "Teacher Home"
-  //   }
-  // }
 });
 
 export default RootNavigator;

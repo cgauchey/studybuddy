@@ -52,6 +52,16 @@ const theMap = () => (
       }}
       title="NOCO"
     />
+
+    <Marker
+      coordinate={{
+        latitude: 40.8075,
+        longitude: -73.9597,
+        latitudeDelta: 0.02,
+        longitudeDelta: 0.009
+      }}
+      title="SIPA"
+    />
   </MapView>
 );
 

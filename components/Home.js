@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View, Button, Image } from "react-native";
 import { StackNavigator } from "react-navigation";
-let logoPic = {
+const logoPic = {
   uri:
     "https://images-platform.99static.com/fHPxSzfJy7lsHfReCeiicVn1FwA=/500x500/top/smart/99designs-contests-attachments/59/59081/attachment_59081997"
 };
@@ -16,18 +16,6 @@ const Home = ({ navigation }) => (
         title="Join Classroom"
       />
     </View>
-    {/* <Button
-      onPress={() => navigation.navigate("Map")}
-      title="View Library Map"
-    /> */}
-    {/* <Button
-      onPress={() => navigation.navigate("Reaction")}
-      title="Participate"
-    /> */}
-    {/* <Button
-      onPress={() => navigation.navigate("AllStudents")}
-      title="View Class Information"
-    /> */}
   </View>
 );
 

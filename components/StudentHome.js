@@ -12,8 +12,6 @@ const SignIn = ({ navigation }) => (
   <View style={styles.container}>
     <FormLabel>Classroom ID</FormLabel>
     <FormInput />
-    {/* <FormInput onChangeText={INSERTFUNCTION} /> */}
-    {/* <FormValidationMessage>This field is required</FormValidationMessage> */}
     <Button
       onPress={() => navigation.navigate("StudentView")}
       title="Sign In As Student"

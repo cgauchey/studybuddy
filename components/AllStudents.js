@@ -4,12 +4,6 @@ import db from "../firestore";
 import { fetchAllStudents } from "./store/students";
 import { connect } from "react-redux";
 import styles from "./StyleSheet";
-// const firebase = require("firebase");
-// require("firebase/firestore");
-
-// const firestore = require("firestore");
-// const classID = 1;
-// const studentsClass = allStudents.where("classID", "==", classID);
 
 class AllStudents extends React.Component {
   constructor() {
@@ -21,7 +15,6 @@ class AllStudents extends React.Component {
   }
 
   componentDidMount() {
-    // this.fetchAllStudents();
     this.allStudents();
   }
 
@@ -60,21 +53,21 @@ class AllStudents extends React.Component {
                     )}
                     <Text style={styles.font}>{student.email}</Text>
                   </View>
-                  {/* <View style={styles.addStudentBtn}>
-                    <Button
-                      // onPress={() => navigation.navigate("AllStudents")}
-                      title="Add to Study Group"
-                    />
-                  </View> */}
                 </View>
               );
             })
           )}
         </ScrollView>
-        <View style={styles.primaryBtn}>
+        <View style={styles.primaryBtn1}>
+          <Button
+            onPress={() => this.props.navigation.navigate("CreateGroup")}
+            title="Create Study Group"
+          />
+        </View>
+        <View style={styles.primaryBtn1}>
           <Button
             onPress={() => this.props.navigation.navigate("StudyGroup")}
-            title="Generate Study Group"
+            title="Generate Random Group"
           />
         </View>
       </View>
@@ -82,19 +75,6 @@ class AllStudents extends React.Component {
   }
 }
 
-// const mapStateToProps = state => {
-//   return { allStudents: state.student.allStudents };
-// };
-
-// const mapDispatchToProps = dispatch => ({
-//   fetchAllStudents: () => {
-//     dispatch(fetchAllStudents());
-//   }
-// });
 console.disableYellowBox = true;
 
 export default AllStudents;
-// export default connect(
-//   mapStateToProps,
-//   mapDispatchToProps
-// )(AllStudents);

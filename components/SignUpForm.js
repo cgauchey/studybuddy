@@ -35,20 +35,10 @@ class SignUpForm extends React.Component {
     const email = this.state.email;
     const password = this.state.password;
     firebase.auth().createUserWithEmailAndPassword(email, password);
-    // .catch(function(error) {
-    //   const errorCode = error.code;
-    //   const errorMessage = error.message;
-    //   console.log(errorCode, errorMessage);
-    // });
   }
 
   handleLogIn(email, password) {
     firebase.auth().signInWithEmailAndPassword(email, password);
-    // .catch(function(error) {
-    //   var errorCode = error.code;
-    //   var errorMessage = error.message;
-    //   console.log(errorCode, errorMessage);
-    // });
   }
 
   redirect() {
@@ -87,12 +77,6 @@ class SignUpForm extends React.Component {
           }}
           title="Sign Up FIRESTORE"
         />
-        {/* <View>
-          <Button
-            onPress={() => this.props.navigation.navigate("ClassroomId")}
-            title="Log In"
-          />
-        </View> */}
       </View>
     );
   }

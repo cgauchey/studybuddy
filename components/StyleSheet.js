@@ -53,6 +53,12 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 15
   },
+  topic: {
+    color: "white",
+    fontWeight: "bold",
+    fontSize: 15,
+    textDecorationLine: "underline"
+  },
   title: {
     color: "black",
     fontWeight: "bold",
@@ -77,6 +83,19 @@ const styles = StyleSheet.create({
     paddingRight: 17,
     paddingLeft: 17,
     width: 200
+  },
+  groupInfo: {
+    backgroundColor: "#FEB100",
+    marginBottom: 5,
+    borderRadius: 10,
+    // marginRight: 160,
+    marginLeft: 20,
+    marginTop: 10,
+    paddingTop: 10,
+    paddingBottom: 10,
+    paddingRight: 17,
+    paddingLeft: 17,
+    width: 300
   },
   allStudents: {
     flexDirection: "row"
@@ -109,6 +128,18 @@ const styles = StyleSheet.create({
     paddingBottom: 17,
     paddingRight: 17,
     paddingLeft: 17,
+    width: 300
+  },
+  primaryBtn1: {
+    backgroundColor: "#A2EBFF",
+    borderRadius: 10,
+    marginRight: 40,
+    marginLeft: 40,
+    marginTop: 10,
+    paddingTop: 5,
+    paddingBottom: 5,
+    paddingRight: 5,
+    paddingLeft: 5,
     width: 300
   },
   signIn: {
