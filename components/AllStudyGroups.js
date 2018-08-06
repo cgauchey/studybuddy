@@ -43,7 +43,7 @@ class AllStudyGroups extends React.Component {
               return (
                 <View style={styles.allStudents} key={student.id}>
                   <View key={student.id} style={styles.groupInfo}>
-                    <Text style={styles.topic}>{student.topic}</Text>
+                    <Text style={styles.topic}>Topic: {student.topic}</Text>
                     {student.name ? (
                       <Text style={styles.font}>Name: {student.name}</Text>
                     ) : (

@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Button } from "react-native";
+import { StyleSheet } from "react-native";
 import { GiftedChat } from "react-native-gifted-chat";
 import socket from "./Sockets";
 

@@ -1,5 +1,12 @@
 import React from "react";
-import { Text, View, Button } from "react-native";
+import {
+  Text,
+  View,
+  Button,
+  Animated,
+  Easing,
+  KeyboardAvoidingView
+} from "react-native";
 import { createStackNavigator } from "react-navigation";
 import socket from "./Sockets";
 import Questions from "./Questions";
@@ -18,6 +25,12 @@ class Reaction extends React.Component {
     this.incrementExample = this.incrementExample.bind(this);
     // this.reset = this.reset.bind(this);
     this.handleSocket = this.handleSocket.bind(this);
+    this.springValue = new Animated.Value(0.3);
+  }
+
+  spring() {
+    this.springValue.setValue(0.3);
+    Animated.spring(this.springValue, { toValue: 1, friction: 1 }).start();
   }
 
   componentDidMount() {
