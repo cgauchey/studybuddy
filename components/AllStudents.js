@@ -70,6 +70,12 @@ class AllStudents extends React.Component {
             title="Generate Random Group"
           />
         </View>
+        <View style={styles.primaryBtn1}>
+          <Button
+            onPress={() => this.props.navigation.navigate("AllStudyGroups")}
+            title="View All Study Groups"
+          />
+        </View>
       </View>
     );
   }

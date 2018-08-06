@@ -1,4 +1,3 @@
-// import db from ".../firestore";
 const firebase = require("firebase");
 require("firebase/firestore");
 const GET_ALL_STUDENTS = "GET_ALL_STUDENTS";

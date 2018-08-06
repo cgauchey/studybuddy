@@ -12,8 +12,8 @@ import StudentView from "./components/StudentView";
 import TeacherView from "./components/TeacherView";
 import StudyGroup from "./components/StudyGroup";
 import ClassroomId from "./components/ClassroomId";
-import CreateGroup from "./components/CreateGroup";
 import AllStudyGroups from "./components/AllStudyGroups";
+import CreateGroup from "./components/CreateGroup";
 
 const RootNavigator = createStackNavigator({
   Main: {
@@ -82,6 +82,7 @@ const RootNavigator = createStackNavigator({
       headerTitle: "Input Classroom ID"
     }
   },
+
   CreateGroup: {
     screen: CreateGroup,
     navigationOptions: {

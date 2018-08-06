@@ -4,12 +4,6 @@ import db from "../firestore";
 import { fetchAllStudents } from "./store/students";
 import { connect } from "react-redux";
 import styles from "./StyleSheet";
-// const firebase = require("firebase");
-// require("firebase/firestore");
-
-// const firestore = require("firestore");
-// const classID = 1;
-// const studentsClass = allStudents.where("classID", "==", classID);
 
 class AllStudyGroups extends React.Component {
   constructor() {
@@ -21,7 +15,6 @@ class AllStudyGroups extends React.Component {
   }
 
   componentDidMount() {
-    // this.fetchAllStudents();
     this.allStudyGroups();
   }
 
@@ -71,7 +64,7 @@ class AllStudyGroups extends React.Component {
         </ScrollView>
         <View style={styles.primaryBtn1}>
           <Button
-            onPress={() => this.props.navigation.navigate("StudyGroup")}
+            onPress={() => this.props.navigation.navigate("CreateGroup")}
             title="Create Study Group"
           />
         </View>

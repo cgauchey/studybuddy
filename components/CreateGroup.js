@@ -62,7 +62,7 @@ class CreateGroup extends React.Component {
           <Button
             onPress={() => {
               this.handleCreate();
-              this.props.navigation.navigate("AllStudyGroups"); // re route to home?
+              this.props.navigation.navigate("AllStudents"); // re route to home?
             }}
             title="Create Group"
           />

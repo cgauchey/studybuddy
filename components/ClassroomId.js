@@ -16,7 +16,7 @@ class ClassroomId extends React.Component {
     this.state = {
       classroomId: ""
     };
-    // this.handleSignUp() = this.handleSignUp.bind(this)
+    // this.handleSignIn() = this.handleSignUp.bind(this)
   }
 
   handleSignIn() {}
@@ -32,7 +32,6 @@ class ClassroomId extends React.Component {
         </View>
         <FormValidationMessage>This field is required</FormValidationMessage>
         <View>
-          {/*this.props.navigation.navigate("ClassroomId") */}
           <Button
             onPress={() => this.props.navigation.navigate("StudentView")}
             title="Log In As Student"

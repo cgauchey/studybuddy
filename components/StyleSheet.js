@@ -11,7 +11,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingTop: 20,
     paddingBottom: 20
-    // flexDirection: "row"
   },
   repeat: {
     backgroundColor: "#FF2828",
@@ -75,7 +74,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#FEB100",
     marginBottom: 5,
     borderRadius: 10,
-    // marginRight: 160,
     marginLeft: 20,
     marginTop: 10,
     paddingTop: 10,
@@ -88,7 +86,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#FEB100",
     marginBottom: 5,
     borderRadius: 10,
-    // marginRight: 160,
     marginLeft: 20,
     marginTop: 10,
     paddingTop: 10,
@@ -136,8 +133,8 @@ const styles = StyleSheet.create({
     marginRight: 40,
     marginLeft: 40,
     marginTop: 10,
-    paddingTop: 5,
-    paddingBottom: 5,
+    paddingTop: 1,
+    paddingBottom: 1,
     paddingRight: 5,
     paddingLeft: 5,
     width: 300
@@ -149,9 +146,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white"
   },
   signInBtn: {
-    // borderColor: "#F7C46B",
     backgroundColor: "#F7C46B",
-    // borderWidth: 2,
     marginBottom: 20,
     borderRadius: 10,
     marginRight: 40,
