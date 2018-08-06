@@ -43,6 +43,7 @@ class SignIn extends React.Component {
 
   handleLogIn(email, password) {
     try {
+      console.log("email", email);
       firebase.auth().signInWithEmailAndPassword(email, password);
     } catch (err) {
       alert(err.toString());
@@ -82,9 +83,9 @@ class SignIn extends React.Component {
         {/* {this.renderError()} */}
         <Button
           onPress={() => {
-            this.handleLogIn();
+            this.handleLogIn(this.state.email, this.state.password);
             // this.redirect();
-            //this.props.navigation.navigate("ClassroomId");
+            this.props.navigation.navigate("ClassroomId");
           }}
           title="Log In FIRESTORE"
         />
