@@ -60,7 +60,27 @@ const theMap = () => (
         latitudeDelta: 0.02,
         longitudeDelta: 0.009
       }}
-      title="SIPA"
+      title="Lehman Social Sciences Library"
+    />
+
+    <Marker
+      coordinate={{
+        latitude: 40.8102,
+        longitude: -73.9582,
+        latitudeDelta: 0.02,
+        longitudeDelta: 0.009
+      }}
+      title="Social Work Library"
+    />
+
+    <Marker
+      coordinate={{
+        latitude: 40.8073,
+        longitude: -73.9616,
+        latitudeDelta: 0.02,
+        longitudeDelta: 0.009
+      }}
+      title="East Asian Studies Library"
     />
   </MapView>
 );

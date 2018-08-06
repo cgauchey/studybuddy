@@ -1,11 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Button } from "react-native";
-import {
-  FormLabel,
-  FormInput,
-  FormValidationMessage,
-  Image
-} from "react-native-elements";
+import { Text, View, Button } from "react-native";
 import { StackNavigator } from "react-navigation";
 import styles from "./StyleSheet";
 
@@ -28,16 +22,17 @@ const TeacherView = ({ navigation }) => (
     </View>
     <View style={styles.primaryBtn}>
       <Button
-        onPress={() => navigation.navigate("Map")}
-        title="View Library Map"
-      />
-    </View>
-    <View style={styles.primaryBtn}>
-      <Button
         onPress={() => navigation.navigate("AllStudyGroups")}
         title="View All Study Groups"
       />
     </View>
+    <View style={styles.primaryBtn}>
+      <Button
+        onPress={() => navigation.navigate("Map")}
+        title="View Library Map"
+      />
+    </View>
+
     <View>
       <Button onPress={() => navigation.navigate("Main")} title="Logout" />
     </View>

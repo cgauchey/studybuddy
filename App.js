@@ -73,7 +73,7 @@ const RootNavigator = createStackNavigator({
   StudyGroup: {
     screen: StudyGroup,
     navigationOptions: {
-      headerTitle: "Study Buddy"
+      headerTitle: "Study Buddies"
     }
   },
   ClassroomId: {

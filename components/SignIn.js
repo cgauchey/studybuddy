@@ -1,13 +1,6 @@
 import React from "react";
-import { StyleSheet, Text, View, Button, navigation } from "react-native";
-import {
-  FormLabel,
-  FormInput,
-  FormValidationMessage,
-  KeyboardAvoidingView
-} from "react-native-elements";
-
-import { StackNavigator } from "react-navigation";
+import { View, Button, KeyboardAvoidingView } from "react-native";
+import { FormLabel, FormInput } from "react-native-elements";
 import db from "../firebase";
 import styles from "./StyleSheet";
 import PasswordInputText from "react-native-hide-show-password-input";
@@ -53,8 +46,7 @@ class SignIn extends React.Component {
   redirect() {
     firebase.auth().onAuthStateChanged(user => {
       if (user !== null) {
-        this.props.navigation.navigate("ClassroomId"); //Change
-        // window.location = ""
+        this.props.navigation.navigate("ClassroomId");
       } else {
         window.location = "SignIn";
       }
@@ -63,7 +55,7 @@ class SignIn extends React.Component {
 
   render() {
     return (
-      <View style={styles.signIn}>
+      <KeyboardAvoidingView style={styles.signIn} behavior="padding">
         <FormLabel>School E-mail</FormLabel>
         <View style={{ width: 300 }}>
           <FormInput
@@ -72,26 +64,19 @@ class SignIn extends React.Component {
             onChangeText={email => this.setState({ email })}
           />
         </View>
-
         <FormLabel>Password</FormLabel>
-        <View style={{ width: 300 }}>
-          <FormInput
+        <View style={{ width: 265 }}>
+          <PasswordInputText
             autoCorrect={false}
             autoCapitalize="none"
             onChangeText={password => this.setState({ password })}
           />
         </View>
-        {/* {this.renderError()} */}
+
         <Button
           onPress={() => {
             this.handleLogIn(this.state.email, this.state.password);
-            // this.redirect();
-            // this.props.navigation.navigate("ClassroomId");
-            firebase.auth().onAuthStateChanged(user => {
-              if (user) {
-                this.props.navigation.navigate("ClassroomId"); //After successful login, user will be redirected to home.html
-              }
-            });
+            this.redirect();
           }}
           title="Log In"
         />
@@ -102,13 +87,7 @@ class SignIn extends React.Component {
           }}
           title="Sign Up"
         />
-        {/* <View>
-          <Button
-            onPress={() => this.props.navigation.navigate("ClassroomId")}
-            title="Log In"
-          />
-        </View> */}
-      </View>
+      </KeyboardAvoidingView>
     );
   }
 }

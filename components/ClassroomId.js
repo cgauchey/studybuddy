@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Button, navigation } from "react-native";
+import { View, Button, KeyboardAvoidingView } from "react-native";
 import {
   FormLabel,
   FormInput,
@@ -23,7 +23,7 @@ class ClassroomId extends React.Component {
 
   render() {
     return (
-      <View style={styles.signIn}>
+      <KeyboardAvoidingView style={styles.signIn} behavior="padding">
         <FormLabel>Classroom ID</FormLabel>
         <View style={{ width: 300 }}>
           <FormInput
@@ -43,7 +43,7 @@ class ClassroomId extends React.Component {
             title="Log In As Teacher"
           />
         </View>
-      </View>
+      </KeyboardAvoidingView>
     );
   }
 }
