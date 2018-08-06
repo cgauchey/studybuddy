@@ -31,13 +31,14 @@ class ClassroomId extends React.Component {
           />
         </View>
         <FormValidationMessage>This field is required</FormValidationMessage>
-        <View style={styles.signInBtn}>
+        <View>
+          {/*this.props.navigation.navigate("ClassroomId") */}
           <Button
             onPress={() => this.props.navigation.navigate("StudentView")}
             title="Log In As Student"
           />
         </View>
-        <View style={styles.signInBtn}>
+        <View>
           <Button
             onPress={() => this.props.navigation.navigate("TeacherView")}
             title="Log In As Teacher"

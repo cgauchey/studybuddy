@@ -28,6 +28,9 @@ const SignIn = ({ navigation }) => (
         title="View Library Map"
       />
     </View>
+    <View>
+      <Button onPress={() => navigation.navigate("Main")} title="Logout" />
+    </View>
   </View>
 );
 

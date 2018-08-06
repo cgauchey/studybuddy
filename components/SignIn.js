@@ -54,6 +54,7 @@ class SignIn extends React.Component {
     firebase.auth().onAuthStateChanged(user => {
       if (user !== null) {
         this.props.navigation.navigate("ClassroomId"); //Change
+        // window.location = ""
       } else {
         window.location = "SignIn";
       }
@@ -85,16 +86,21 @@ class SignIn extends React.Component {
           onPress={() => {
             this.handleLogIn(this.state.email, this.state.password);
             // this.redirect();
-            this.props.navigation.navigate("ClassroomId");
+            // this.props.navigation.navigate("ClassroomId");
+            firebase.auth().onAuthStateChanged(user => {
+              if (user) {
+                this.props.navigation.navigate("ClassroomId"); //After successful login, user will be redirected to home.html
+              }
+            });
           }}
-          title="Log In FIRESTORE"
+          title="Log In"
         />
         <Button
           onPress={() => {
             this.handleSignUp();
             this.props.navigation.navigate("ClassroomId");
           }}
-          title="Sign Up FIRESTORE"
+          title="Sign Up"
         />
         {/* <View>
           <Button
