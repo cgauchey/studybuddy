@@ -1,20 +1,21 @@
 import React from "react";
 import { StyleSheet, Text, View, Button, Image } from "react-native";
 import { StackNavigator } from "react-navigation";
-let pic = {
+let logoPic = {
   uri:
     "https://images-platform.99static.com/fHPxSzfJy7lsHfReCeiicVn1FwA=/500x500/top/smart/99designs-contests-attachments/59/59081/attachment_59081997"
 };
 const Home = ({ navigation }) => (
   <View style={styles.container}>
     <View style={styles.logo}>
-      <Image source={pic} style={styles.image} />
+      <Image source={logoPic} style={styles.image} />
     </View>
-    <Button
-      style={styles.button}
-      onPress={() => navigation.navigate("SignIn")}
-      title="Join Classroom"
-    />
+    <View style={styles.button}>
+      <Button
+        onPress={() => navigation.navigate("SignIn")}
+        title="Join Classroom"
+      />
+    </View>
     {/* <Button
       onPress={() => navigation.navigate("Map")}
       title="View Library Map"
@@ -46,10 +47,16 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   button: {
-    paddingTop: 20,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-around"
+    backgroundColor: "#F7C46B",
+    borderRadius: 10,
+    marginRight: 40,
+    marginLeft: 40,
+    marginTop: 10,
+    paddingTop: 17,
+    paddingBottom: 17,
+    paddingRight: 17,
+    paddingLeft: 17,
+    width: 200
   }
 });
 

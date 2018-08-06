@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  Button,
-  ScrollView,
-  Grid,
-  Col,
-  Row
-} from "react-native";
+import { Text, View, ScrollView } from "react-native";
 import db from "../firestore";
 import styles from "./StyleSheet";
 
@@ -44,12 +35,14 @@ class StudyGroup extends React.Component {
       allStudents[i] = allStudents[j];
       allStudents[j] = x;
     }
-    return allStudents[0];
+    // return allStudents[0];
+    return allStudents.slice(0, 3);
   }
 
   render() {
     const allStudents = this.state.allStudents;
-    const randomStudent = this.randomGroup(allStudents);
+    const randomStudents = this.randomGroup(allStudents);
+    // const randomStudent = this.randomGroup(allStudents);
     return (
       <View style={styles.container}>
         <ScrollView>
@@ -58,22 +51,32 @@ class StudyGroup extends React.Component {
               <Text style={styles.title}>Loading...</Text>
             </View>
           ) : (
-            <View style={styles.loading}>
-              <Text style={styles.title}>Your Study Buddy is ...</Text>
-              <View style={styles.allStudents}>
-                <View key={randomStudent.id} style={styles.studentInfo}>
-                  <Text style={styles.font}>
-                    {randomStudent.firstName} {randomStudent.lastName}
-                  </Text>
-                  {randomStudent.college ? (
-                    <Text style={styles.font}>{randomStudent.college}</Text>
-                  ) : (
-                    <Text style={styles.font}>(no college found)</Text>
-                  )}
-                  <Text style={styles.font}>{randomStudent.email}</Text>
-                </View>
+            // return (
+            ((
+              <View style={styles.loading}>
+                <Text style={styles.title}>Your Study Buddies are ...</Text>
               </View>
-            </View>
+            ),
+            randomStudents.map(randomStudent => {
+              return (
+                <View style={styles.loading} key={randomStudent.id}>
+                  {/* <Text style={styles.title}>Your Study Buddies are ...</Text> */}
+                  <View style={styles.allStudents}>
+                    <View key={randomStudent.id} style={styles.studentInfo}>
+                      <Text style={styles.font}>
+                        {randomStudent.firstName} {randomStudent.lastName}
+                      </Text>
+                      {randomStudent.college ? (
+                        <Text style={styles.font}>{randomStudent.college}</Text>
+                      ) : (
+                        <Text style={styles.font}>(no college found)</Text>
+                      )}
+                      <Text style={styles.font}>{randomStudent.email}</Text>
+                    </View>
+                  </View>
+                </View>
+              );
+            }))
           )}
         </ScrollView>
       </View>

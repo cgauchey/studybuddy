@@ -8,6 +8,7 @@ import {
 
 import { StackNavigator } from "react-navigation";
 import db from "../firebase";
+import styles from "./StyleSheet";
 
 class ClassroomId extends React.Component {
   constructor(props) {
@@ -22,32 +23,29 @@ class ClassroomId extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <View style={styles.signIn}>
         <FormLabel>Classroom ID</FormLabel>
-        <FormInput
-          onChangeText={classroomId => this.setState({ classroomId })}
-        />
+        <View style={{ width: 300 }}>
+          <FormInput
+            onChangeText={classroomId => this.setState({ classroomId })}
+          />
+        </View>
         <FormValidationMessage>This field is required</FormValidationMessage>
-        <Button
-          onPress={() => this.props.navigation.navigate("StudentView")}
-          title="Log In As Student"
-        />
-        <Button
-          onPress={() => this.props.navigation.navigate("TeacherView")}
-          title="Log In As Teacher"
-        />
+        <View style={styles.signInBtn}>
+          <Button
+            onPress={() => this.props.navigation.navigate("StudentView")}
+            title="Log In As Student"
+          />
+        </View>
+        <View style={styles.signInBtn}>
+          <Button
+            onPress={() => this.props.navigation.navigate("TeacherView")}
+            title="Log In As Teacher"
+          />
+        </View>
       </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "white"
-  }
-});
 
 export default ClassroomId;

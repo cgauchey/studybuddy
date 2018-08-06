@@ -14,7 +14,7 @@ import PasswordInputText from "react-native-hide-show-password-input";
 const firebase = require("firebase");
 require("firebase/firestore");
 
-class SignIn extends React.Component {
+class SignUpForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -27,64 +27,56 @@ class SignIn extends React.Component {
     this.redirect = this.redirect.bind(this);
   }
 
-  // componentDidMount() {
-  //   this.redirect();
-  // }
+  componentDidMount() {
+    this.redirect();
+  }
 
   handleSignUp() {
     const email = this.state.email;
     const password = this.state.password;
-    try {
-      firebase.auth().createUserWithEmailAndPassword(email, password);
-    } catch (err) {
-      alert(err.toString());
-    }
+    firebase.auth().createUserWithEmailAndPassword(email, password);
+    // .catch(function(error) {
+    //   const errorCode = error.code;
+    //   const errorMessage = error.message;
+    //   console.log(errorCode, errorMessage);
+    // });
   }
 
   handleLogIn(email, password) {
-    try {
-      firebase.auth().signInWithEmailAndPassword(email, password);
-    } catch (err) {
-      alert(err.toString());
-    }
+    firebase.auth().signInWithEmailAndPassword(email, password);
+    // .catch(function(error) {
+    //   var errorCode = error.code;
+    //   var errorMessage = error.message;
+    //   console.log(errorCode, errorMessage);
+    // });
   }
 
   redirect() {
     firebase.auth().onAuthStateChanged(user => {
-      if (user !== null) {
-        this.props.navigation.navigate("ClassroomId"); //Change
+      if (user) {
+        window.location = "ClassroomId"; //Change
       } else {
         window.location = "SignIn";
       }
     });
   }
-
   render() {
     return (
       <View style={styles.signIn}>
         <FormLabel>School E-mail</FormLabel>
         <View style={{ width: 300 }}>
-          <FormInput
-            autoCorrect={false}
-            autoCapitalize="none"
-            onChangeText={email => this.setState({ email })}
-          />
+          <FormInput onChangeText={email => this.setState({ email })} />
         </View>
 
         <FormLabel>Password</FormLabel>
         <View style={{ width: 300 }}>
-          <FormInput
-            autoCorrect={false}
-            autoCapitalize="none"
-            onChangeText={password => this.setState({ password })}
-          />
+          <FormInput onChangeText={password => this.setState({ password })} />
         </View>
-        {/* {this.renderError()} */}
+
         <Button
           onPress={() => {
             this.handleLogIn();
-            // this.redirect();
-            //this.props.navigation.navigate("ClassroomId");
+            this.props.navigation.navigate("ClassroomId");
           }}
           title="Log In FIRESTORE"
         />
@@ -106,4 +98,4 @@ class SignIn extends React.Component {
   }
 }
 
-export default SignIn;
+export default SignUpForm;

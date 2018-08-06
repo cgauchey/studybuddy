@@ -110,6 +110,32 @@ const styles = StyleSheet.create({
     paddingRight: 17,
     paddingLeft: 17,
     width: 300
+  },
+  signIn: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "white"
+  },
+  signInBtn: {
+    // borderColor: "#F7C46B",
+    backgroundColor: "#F7C46B",
+    // borderWidth: 2,
+    marginBottom: 20,
+    borderRadius: 10,
+    marginRight: 40,
+    marginLeft: 40,
+    marginTop: 10,
+    paddingTop: 3,
+    paddingBottom: 3,
+    paddingRight: 5,
+    paddingLeft: 5
+  },
+  formInput: {
+    width: 300
+  },
+  passwordInput: {
+    margin: 20
   }
 });
 

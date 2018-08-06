@@ -55,7 +55,7 @@ const RootNavigator = createStackNavigator({
   AllStudents: {
     screen: AllStudents,
     navigationOptions: {
-      headerTitle: "All Students"
+      headerTitle: "Student Roster"
     }
   },
   StudentView: {

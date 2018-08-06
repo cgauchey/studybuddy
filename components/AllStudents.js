@@ -4,6 +4,8 @@ import db from "../firestore";
 import { fetchAllStudents } from "./store/students";
 import { connect } from "react-redux";
 import styles from "./StyleSheet";
+// const firebase = require("firebase");
+// require("firebase/firestore");
 
 // const firestore = require("firestore");
 // const classID = 1;
@@ -19,6 +21,7 @@ class AllStudents extends React.Component {
   }
 
   componentDidMount() {
+    // this.fetchAllStudents();
     this.allStudents();
   }
 
@@ -33,17 +36,6 @@ class AllStudents extends React.Component {
     this.setState({ allStudents: arr });
   }
 
-  randomGroup(allStudents) {
-    var j, x, i;
-    for (i = allStudents.length - 1; i > 0; i--) {
-      j = Math.floor(Math.random() * (i + 1));
-      x = allStudents[i];
-      allStudents[i] = allStudents[j];
-      allStudents[j] = x;
-    }
-    return allStudents[0];
-  }
-
   render() {
     const allStudents = this.state.allStudents;
     return (
@@ -56,7 +48,7 @@ class AllStudents extends React.Component {
           ) : (
             allStudents.map(student => {
               return (
-                <View style={styles.allStudents}>
+                <View style={styles.allStudents} key={student.id}>
                   <View key={student.id} style={styles.studentInfo}>
                     <Text style={styles.font}>
                       {student.firstName} {student.lastName}
@@ -99,6 +91,10 @@ class AllStudents extends React.Component {
 //     dispatch(fetchAllStudents());
 //   }
 // });
+console.disableYellowBox = true;
 
 export default AllStudents;
-// export default (mapStateToProps, mapDispatchToProps)(AllStudents);
+// export default connect(
+//   mapStateToProps,
+//   mapDispatchToProps
+// )(AllStudents);
