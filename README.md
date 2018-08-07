@@ -1,3 +1,6 @@
+Study Buddy is meant to enhance your study experience by allowing you to react and ask professors questions in real time, creating study groups, and finding places to study. Built using Firestore, React Native, and Socket.io.
+
+
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
 Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md).
