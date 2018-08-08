@@ -1,4 +1,4 @@
-Study Buddy is a mobile app that enhances your classroom experience by allowing you to anonymously react to lectures and ask professors questions in real time, create study groups, and find places to study. Built using Firestore, React Native, and Socket.io. Built using Firestore, React Native, and Socket.io.
+Study Buddy is a mobile app that enhances your classroom experience by allowing you to anonymously react to lectures and ask professors questions in real time, create study groups, and find places to study. Built using Firebase, React Native, and Socket.io. 
 
 
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
